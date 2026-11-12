@@ -53,7 +53,8 @@ Search the code for these markers. Each one is visible on the page or written in
 | What | Where | Marker |
 | --- | --- | --- |
 | App Store and Google Play URLs | home CTA band, waitlist page, every footer | `STORE LINK` comment and `data-store-link` |
-| Real app screenshots | every phone frame | `SCREENSHOT` comment |
+| Real app screenshots | every phone and watch frame | `SCREENSHOT` comment |
+| Supported Garmin models | `features/index.html` watch section | `.tbc` chip |
 | Plan names, prices, billing period, inclusions, trial terms | `pricing/index.html` | `.tbc` chips and "Working title" badges |
 | Verified by coach: review process, turnaround, athlete price, coach terms, start date | `coaches/index.html` | `.tbc` chips |
 | Coach qualification requirements | `coaches/index.html` | `.tbc` chip |
@@ -63,7 +64,7 @@ Search the code for these markers. Each one is visible on the page or written in
 
 Facts to confirm. These come from the current app code (`trainer-mobile-application`), and the site states them as available:
 
-- Apple Watch and Wear OS companion apps (simulation timer, pause/next/end, sync back to phone)
+- Apple Watch, Wear OS and Garmin companion apps (simulation timer, pause/next/end, sync back to phone). Garmin is still on the app's `poc/garmin-forerunner` branch; it's shown as available on the site
 - Apple Health and Health Connect sync, with per-category sharing and delete
 - iPhone and Android as the launch platforms (also in the JSON-LD `operatingSystem`)
 - The three MODO formats and their summaries, and up to 64 segments per custom simulation
@@ -82,6 +83,10 @@ Replace the `.phone-screen` contents:
 ```
 
 Export screens as WebP at about 600–800px wide (around 60–120 KB each). Use `loading="lazy"` on everything except the home hero. The CSS already crops the image to the frame. Once real images are in, you can remove the dashed border by deleting `border: 1px dashed …` from `.phone-screen`.
+
+### Replacing a watch placeholder
+
+Same idea, inside `.watch-screen`. Export at the watch's native resolution (for example 396×484 for a 45mm Apple Watch, or a square image for round Wear OS and Garmin screens). The round frames crop the image to a circle.
 
 ### Replacing a store placeholder
 
