@@ -1,5 +1,5 @@
 # Cloudflare Pages response headers. https://developers.cloudflare.com/pages/configuration/headers/
-# FORM ENDPOINT: when you connect the signup forms, add the service's origin to connect-src.
+# The signup forms post to /api/signup on this domain, so connect-src 'self' covers them.
 # The sha256 hash allows the one-line inline script in each page's <head>; update it if that script changes.
 /*
   Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-Du+OJKJSbdUgz5nrHeWWINvez6XKDDU/tyj/5c2uvwo='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'
