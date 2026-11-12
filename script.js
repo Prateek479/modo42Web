@@ -30,8 +30,8 @@
   }
 
   // ---------- Signup forms ----------
-  // INTEGRATION POINT: each form reads its endpoint from its `data-endpoint`
-  // attribute. While it is empty, nothing is sent and the visitor is told so.
+  // Each form POSTs JSON to its `data-endpoint` (functions/api/signup.js).
+  // If the attribute is empty, nothing is sent and the visitor is told so.
   // See README.md → "Connect the forms".
   var EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 

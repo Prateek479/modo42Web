@@ -184,11 +184,11 @@
       <h2 id="register-title">Let’s grow Modo42 together.</h2>
       <p class="lead">Register your interest and tell us a little about your coaching. This is an expression of interest, not an account, a job application or a confirmed coaching role.</p>
       <p class="note form-aside">We’ll only use your details to contact you about Modo42 coaching. No compensation or start date has been set.</p>
-      <p class="note form-aside"><span class="tbc">Privacy policy link</span></p>
+      <p class="note form-aside">Read our <a class="text-link" href="/privacy/">privacy policy</a>.</p>
     </div>
     <div class="form-card">
-      <!-- INTEGRATION POINT: set data-endpoint to your signup service URL. See README.md → Connect the forms. -->
-      <form data-form="coach" data-endpoint="" method="post" data-success="Thanks, we’ve got your details." data-success-body="We’ll be in touch about Modo42 coaching." aria-describedby="coach-notice">
+      <!-- Submits to functions/api/signup.js. See README.md → Connect the forms. -->
+      <form data-form="coach" data-endpoint="/api/signup" method="post" data-success="Thanks, we’ve got your details." data-success-body="We’ll be in touch about Modo42 coaching.">
         <div class="field">
           <label for="coach-name">Full name</label>
           <input class="input" id="coach-name" name="name" type="text" autocomplete="name" maxlength="120" required aria-describedby="coach-name-error">
@@ -228,7 +228,6 @@
         <p class="field-error" id="coach-consent-error"></p>
         <button class="button button--primary button--block" type="submit">Register my interest <svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#arrow-right"></use></svg></button>
         <div class="form-status" role="status" tabindex="-1"></div>
-        <p class="integration-notice" id="coach-notice"><svg class="i" aria-hidden="true" focusable="false"><use href="/assets/icons.svg#info"></use></svg><span>This form isn’t connected to a signup service yet, so nothing you enter is sent or stored.</span></p>
       </form>
     </div>
   </div>
@@ -249,6 +248,7 @@
           <li><a href="/coaches/">Coaches</a></li>
           <li><a href="/pricing/">Pricing</a></li>
           <li><a href="/join-waitlist/">Join the waitlist</a></li>
+          <li><a href="/privacy/">Privacy policy</a></li>
         </ul>
       </nav>
       <div>
